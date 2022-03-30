@@ -1,0 +1,54 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+int main()
+{
+	int a[100];
+	int n, sum = 0, max = 0, k = 0, flag = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> a[i];
+	}
+	int ;
+		for (int i = 0; i < n; i++)
+		{
+			if (a[i] < 0)
+				flag = 0;
+			else
+			{
+				flag = 0;
+				break;
+			}
+		}
+		if (flag==1)
+		{
+			cout << 0;
+		}
+		else
+		{
+			
+				for (int x = 0; x < n; x++)
+				{
+					for (int j = x; j < n - x; j++)
+					{
+						for (int y = x; y <= k; y++)
+						{
+							sum = sum + a[y];
+						}
+						if (sum > max)
+							max = sum;
+						k++;
+						if (k > n - x - 1)
+							k = 0;
+
+						sum = 0;
+					}
+				}
+			
+			cout << max;
+		}
+		system("pause");
+		return 0;
+		
+}
